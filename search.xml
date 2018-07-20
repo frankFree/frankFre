@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Closure（闭包）理解]]></title>
+    <url>%2F2018%2F07%2F20%2Fclosure%2F</url>
+    <content type="text"><![CDATA[closure闭包的定义closure = function + outer context function: usually created/returned by another functionouter function: variables this function relies onlexical scope: the variable that defined outside are automatically available inside you don’t hava to pass it inconsole.dir(function): 闭包的作用 可以读取函数内部的变量 让这些变量的值始终保存在内存中 examplesdemo 1:1234567891011var addTo = function(passed) &#123; var add = function(inner) &#123; return passed + inner &#125; return add&#125;console.dir(addTo(3))var addThree = new addTo(3)var addFour = new addTo(4)console.log(addThree(1)) // 4console.log(addFour(1)) // 5 demo 2:1234567891011let f;if (true) &#123; let i = 1; f = () =&gt; &#123; console.log(i) &#125;&#125;console.dir(f); // 查看闭包 查看下图// console.log(i); // 如果f没执行，就会报 i is not definedf(); demo 3:1234567891011121314151617181920212223242526272829303132333435363738394041for(let i = 0; i &lt; 3; i++) &#123; setTimeout(() =&gt; &#123; console.log(i) &#125;, 1000)&#125;console.log('after the loop')// result // after the loop// 0// 1// 2for(var i = 0; i &lt; 3; i++) &#123; setTimeout(() =&gt; &#123; console.log(i) &#125;, 1000)&#125;console.log('after the loop')// result// after the loop// 3// 3// 3// 造成以上两种情况不同的原因是let声明的变量只在其声明的块或子块中可用，这一点，与var相似。二者之间最主要的区别在于var声明的变量的作用域是整个封闭函数。下面两个函数可以清晰的体现出来function varTest() &#123; var x = 1; if (true) &#123; var x = 2; // 同样的变量! console.log(x); // 2 &#125; console.log(x); // 2&#125;function letTest() &#123; let x = 1; if (true) &#123; let x = 2; // 不同的变量 console.log(x); // 2 &#125; console.log(x); // 1&#125; 更多与此demo相关案例 参考demo 4:123456789101112131415function outer() &#123; var a = 1; aAdd = function() &#123; n += 1; &#125; var inner = function() &#123; console.log(a) &#125; return inner&#125;result() // 1aAdd() // undefinedresult() // 2// ps: result其实就是闭包inner函数，outer 是 inner 的父函数，而inner被赋予了一个全局变量，这导致了inner始终在内存中，而inner函数的存在依赖于outer，所以outer也始终在内存中，不会在调用结束后被gc(gabage collection)回收。// 还有一个值得注意的点是： aAdd = function()&#123; a += 1 &#125;，首先 aAdd前面没有使用var关键字，因此nAdd是一个全局变量，而不是局部变量。其次，aAdd的值是一个匿名函数(anonymous function)，而这个匿名函数本身也是一个闭包，可以在函数外部对函数内部的局部变量进行操作 使用闭包的注意点 会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。 父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Java Script</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[写在开头]]></title>
     <url>%2F2018%2F07%2F18%2Fbeginning%2F</url>
     <content type="text"><![CDATA[开始的开始把我很喜欢的一段话分享给大家，这是国产电影《大鱼·海棠》中女主人公 —— 椿 的一段独白： 你相信奇迹吗？生命是一场旅程，我们等了多少个轮回，才有机会去享受这一次旅程。这短短的一生，我们最终都会失去，不妨大胆一些，爱一个人，攀一座山，追一个梦。是的，不妨大胆一些。很多事我都不了解，很多问题也没有答案。但我相信，上天给我们生命，一定是为了让我们创造奇迹的。—— 电影《大鱼·海棠》]]></content>
