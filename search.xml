@@ -12,14 +12,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[写在开头]]></title>
-    <url>%2F2018%2F07%2F18%2Fbeginning%2F</url>
-    <content type="text"><![CDATA[开始的开始把我很喜欢的一段话分享给大家，这是国产电影《大鱼·海棠》中女主人公 —— 椿 的一段独白： 你相信奇迹吗？生命是一场旅程，我们等了多少个轮回，才有机会去享受这一次旅程。这短短的一生，我们最终都会失去，不妨大胆一些，爱一个人，攀一座山，追一个梦。是的，不妨大胆一些。很多事我都不了解，很多问题也没有答案。但我相信，上天给我们生命，一定是为了让我们创造奇迹的。—— 电影《大鱼·海棠》]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[Node.JS 入门]]></title>
     <url>%2F2018%2F07%2F18%2Fnode-js%2F</url>
     <content type="text"><![CDATA[请您稍后，待更新状态]]></content>
@@ -29,6 +21,14 @@
       <tags>
         <tag>Node.JS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[写在开头]]></title>
+    <url>%2F2018%2F07%2F18%2Fbeginning%2F</url>
+    <content type="text"><![CDATA[开始的开始把我很喜欢的一段话分享给大家，这是国产电影《大鱼·海棠》中女主人公 —— 椿 的一段独白： 你相信奇迹吗？生命是一场旅程，我们等了多少个轮回，才有机会去享受这一次旅程。这短短的一生，我们最终都会失去，不妨大胆一些，爱一个人，攀一座山，追一个梦。是的，不妨大胆一些。很多事我都不了解，很多问题也没有答案。但我相信，上天给我们生命，一定是为了让我们创造奇迹的。—— 电影《大鱼·海棠》]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[爬虫]]></title>
