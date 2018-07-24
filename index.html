@@ -406,12 +406,24 @@
                 
               
 
-              <time title="创建时间：2018-07-20 13bu151u:39:15 / 修改时间：13bu261u:42:26" itemprop="dateCreated datePublished" datetime="2018-07-20T13:39:15+08:00">2018-07-20</time>
+              <time title="创建时间：2018-07-20 13bu151u:39:15" itemprop="dateCreated datePublished" datetime="2018-07-20T13:39:15+08:00">2018-07-20</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-07-24 09bu79u:18:07" itemprop="dateModified" datetime="2018-07-24T09:18:07+08:00">2018-07-24</time>
               
             
           </span>
@@ -474,8 +486,8 @@
       
         
           
-            <h1 id="closure"><a href="#closure" class="headerlink" title="closure"></a>closure</h1><h2 id="闭包的定义"><a href="#闭包的定义" class="headerlink" title="闭包的定义"></a>闭包的定义</h2><h3 id="closure-function-outer-context"><a href="#closure-function-outer-context" class="headerlink" title="closure = function + outer context"></a>closure = function + outer context</h3><blockquote>
-<p><strong>function</strong>: usually created/returned by another function<br><strong>outer function</strong>: variables this function relies on<br><strong>lexical scope</strong>: the variable that defined outside are automatically available inside you don’t hava to pass it in<br><strong>console.dir(function)</strong>: </p>
+            <h1 id="closure"><a href="#closure" class="headerlink" title="closure"></a>closure</h1><h2 id="闭包的定义"><a href="#闭包的定义" class="headerlink" title="闭包的定义"></a>闭包的定义</h2><h3 id="闭包是由函数和与其相关的引用环境组合而成的实体"><a href="#闭包是由函数和与其相关的引用环境组合而成的实体" class="headerlink" title="闭包是由函数和与其相关的引用环境组合而成的实体"></a>闭包是由函数和与其相关的引用环境组合而成的实体</h3><h3 id="closure-function-outer-context"><a href="#closure-function-outer-context" class="headerlink" title="closure = function + outer context"></a>closure = function + outer context</h3><blockquote>
+<p><strong>function</strong>: usually created/returned by another function<br><strong>outer context</strong>: variables this function relies on<br><strong>lexical scope</strong>: the variable that defined outside are automatically available inside you don’t hava to pass it in<br><strong>console.dir(function)</strong>: </p>
 </blockquote>
 <h2 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h2><ul>
 <li>可以读取函数内部的变量</li>
@@ -486,190 +498,12 @@
 <p><img src="media/14929511708368/QQ20180719-170429.png" alt="QQ20180719-170429"></p>
 <h5 id="demo-3"><a href="#demo-3" class="headerlink" title="demo 3:"></a>demo 3:</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'after the loop'</span>)</span><br><span class="line"><span class="comment">// result </span></span><br><span class="line"><span class="comment">// after the loop</span></span><br><span class="line"><span class="comment">// 0</span></span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'after the loop'</span>)</span><br><span class="line"><span class="comment">// result</span></span><br><span class="line"><span class="comment">// after the loop</span></span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 造成以上两种情况不同的原因是let声明的变量只在其声明的块或子块中可用，这一点，与var相似。二者之间最主要的区别在于var声明的变量的作用域是整个封闭函数。下面两个函数可以清晰的体现出来</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">varTest</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="number">2</span>;  <span class="comment">// 同样的变量!</span></span><br><span class="line">    <span class="built_in">console</span>.log(x);  <span class="comment">// 2</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(x);  <span class="comment">// 2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">letTest</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> x = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> x = <span class="number">2</span>;  <span class="comment">// 不同的变量</span></span><br><span class="line">    <span class="built_in">console</span>.log(x);  <span class="comment">// 2</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(x);  <span class="comment">// 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h6 id="更多与此demo相关案例-参考"><a href="#更多与此demo相关案例-参考" class="headerlink" title="更多与此demo相关案例 参考"></a>更多与此demo相关案例 <a href="https://yuchengkai.cn/docs/zh/js/#%E9%97%AD%E5%8C%85" target="_blank" rel="noopener">参考</a></h6><h5 id="demo-4"><a href="#demo-4" class="headerlink" title="demo 4:"></a>demo 4:</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">    aAdd = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        n += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> inner = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line">&#125;</span><br><span class="line">result() <span class="comment">// 1</span></span><br><span class="line">aAdd() <span class="comment">// undefined</span></span><br><span class="line">result() <span class="comment">// 2</span></span><br><span class="line"><span class="comment">// ps: result其实就是闭包inner函数，outer 是 inner 的父函数，而inner被赋予了一个全局变量，这导致了inner始终在内存中，而inner函数的存在依赖于outer，所以outer也始终在内存中，不会在调用结束后被gc(gabage collection)回收。</span></span><br><span class="line"><span class="comment">// 还有一个值得注意的点是： aAdd = function()&#123; a += 1 &#125;，首先 aAdd前面没有使用var关键字，因此nAdd是一个全局变量，而不是局部变量。其次，aAdd的值是一个匿名函数(anonymous function)，而这个匿名函数本身也是一个闭包，可以在函数外部对函数内部的局部变量进行操作</span></span><br></pre></td></tr></table></figure>
+<h5 id="demo-5"><a href="#demo-5" class="headerlink" title="demo 5:"></a>demo 5:</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">j</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">"i:"</span>+i+<span class="string">" ,j:"</span>+j);		</span><br><span class="line">        alert(j + i++);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">test(<span class="number">1</span>)();<span class="comment">//提示1</span></span><br><span class="line">test(<span class="number">1</span>)();<span class="comment">//还是提示1</span></span><br><span class="line">test(<span class="number">1</span>)();<span class="comment">//依然提示1</span></span><br><span class="line"></span><br><span class="line">理解： 三次直接运行test(<span class="number">1</span>)()会生成三次函数的调用，函数指针指向三个不同的函数调用，这三次生成属于三个独立的个体互补影响，每次函数test()都能重新完整运行，i都能初始化为<span class="number">0</span>；</span><br><span class="line">【更深入理解】：用<span class="keyword">var</span> c引用test()后（此时 i 离开创造它的环境test()函数），只有一份函数指针指向同一个函数调用，所以后面的虽是三次c()，但还是运行的同一个函数，因为函数中的自由变量i早在加载的时候就已经赋值为<span class="number">0</span>了，放在一个属于指向这个函数test()的“暂存区”，让每次调用都共享这个变量i的值（被引用的自由变量 i 与引用它的函数test()一同存在），允许所有指向同一个函数调用的之后每次调用修改 i 的值并且会生效。所以，指向同一个函数调用的三个c()都能修改 i 的值，并且修改都生效了。</span><br><span class="line"></span><br><span class="line">经过改造一下：</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">j</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">"i:"</span>+i+<span class="string">" ,j:"</span>+j);		</span><br><span class="line">        alert(j + i++);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> c = test(<span class="number">1</span>);</span><br><span class="line">c();<span class="comment">//提示1</span></span><br><span class="line">c();<span class="comment">//提示2</span></span><br><span class="line">c();<span class="comment">//提示3</span></span><br><span class="line"></span><br><span class="line">分析：闭包是由函数和与其相关的引用环境组合而成的实体。以上js代码中，<span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">j</span>)及引用它的环境3个<span class="title">c</span>(<span class="params"></span>)构成实体即是闭包。在闭包中变量（如此处的 <span class="title">i</span>）全程共享，此处<span class="title">i</span>相当于闭包中的全局变量，而不随每次<span class="title">c</span>(<span class="params"></span>)运行而重置变量 <span class="title">i</span> 为0，所以每次运行<span class="title">c</span>(<span class="params"></span>)变量<span class="title">i</span>都会累加，而每次传入的变量<span class="title">j</span>不变为1。</span></span><br></pre></td></tr></table></figure>
 <h2 id="使用闭包的注意点"><a href="#使用闭包的注意点" class="headerlink" title="使用闭包的注意点"></a>使用闭包的注意点</h2><ul>
 <li>会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</li>
 <li>父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</li>
 </ul>
 
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://frankFree.github.io/2018/07/18/node-js/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="curryLiang">
-      <meta itemprop="description" content="stay hungry! stay foolish">
-      <meta itemprop="image" content="/images/imgs/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的全栈之路">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/18/node-js/" itemprop="url">
-                  Node.JS 入门
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-07-18 02bu102u:16:10" itemprop="dateCreated datePublished" datetime="2018-07-18T02:16:10+08:00">2018-07-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-07-20 11bu1911u:13:19" itemprop="dateModified" datetime="2018-07-20T11:13:19+08:00">2018-07-20</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/18/node-js/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/07/18/node-js/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="请您稍后，待更新状态"><a href="#请您稍后，待更新状态" class="headerlink" title="请您稍后，待更新状态"></a>请您稍后，待更新状态</h2>
           
         
       
@@ -853,6 +687,185 @@
 <p><strong>你相信奇迹吗？</strong><br><strong>生命是一场旅程，我们等了多少个轮回，才有机会去享受这一次旅程。</strong><br><strong>这短短的一生，我们最终都会失去，不妨大胆一些，爱一个人，攀一座山，追一个梦。是的，不妨大胆一些。</strong><br><strong>很多事我都不了解，很多问题也没有答案。但我相信，上天给我们生命，一定是为了让我们创造奇迹的。</strong><br><strong>—— 电影《大鱼·海棠》</strong></p>
 </blockquote>
 
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://frankFree.github.io/2018/07/18/node-js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="curryLiang">
+      <meta itemprop="description" content="stay hungry! stay foolish">
+      <meta itemprop="image" content="/images/imgs/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的全栈之路">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/18/node-js/" itemprop="url">
+                  Node.JS 入门
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-18 02bu102u:16:10" itemprop="dateCreated datePublished" datetime="2018-07-18T02:16:10+08:00">2018-07-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-07-20 11bu1911u:13:19" itemprop="dateModified" datetime="2018-07-20T11:13:19+08:00">2018-07-20</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/18/node-js/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/07/18/node-js/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="请您稍后，待更新状态"><a href="#请您稍后，待更新状态" class="headerlink" title="请您稍后，待更新状态"></a>请您稍后，待更新状态</h2>
           
         
       
