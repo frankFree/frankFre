@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[研发分享]]></title>
+    <url>%2F2018%2F07%2F27%2Fshare%2F</url>
+    <content type="text"><![CDATA[es6、es7目前状况 开发环境已经普及应用 浏览器环境却支持不好（需要开发环境编译） 内容很多，重点了解常用语法 面试：开发环境的使用 + 重点语法的掌握 常见面试题 ES6模块化如何使用，开发环境如何打包 Class和普通构造函数的区别 Promise的基本使用和原理 总结ES6其它常用功能 开发环境]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[致不知道是谁的致歉信]]></title>
     <url>%2F2018%2F07%2F25%2Fstarter%2F</url>
     <content type="text"><![CDATA[关于博客初衷由于本人工作非常忙，这几年来整理的一些知识都是记录在有道云笔记上的，平时也经常看一些blog，有时候收获挺多的，所以也一直想把自己的一些认知分享给别人！我认为这是一种快乐！ 发展当时为了方便，就在github上随便找了一个blog采用的hexo next主题，那天就顺手clone下来，研究了一下，包括也穿件了自己的cloud账号啥的，花了大概不到一小时，自己也把hexo流程熟悉了一下，直接deploy到github pages上了，紧接着几天工作非常忙！忘记这茬子事了，也一直忘记了，也不是故意用那位谁的一些post，真的是失误！所以当即打算重新采用一款非常简洁的主题：maupassant 传送门 目标打算利用三个月的时间将大前端的知识全部系统的整理出来，到时还会有相关的实战项目，希望大家多多支持]]></content>
