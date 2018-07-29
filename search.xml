@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[关于博客]]></title>
     <url>%2F2018%2F07%2F25%2Fstarter%2F</url>
-    <content type="text"><![CDATA[初衷由于本人工作非常忙，这几年来整理的一些知识都是记录在有道云笔记上的，平时也经常看一些blog，有时候收获挺多的，所以也一直想把自己的一些认知分享给别人！我认为这是一种快乐！ 发展当时为了方便，就在github上随便找了一个blog采用的hexo next主题，那天就顺手clone下来，研究了一下，包括也穿件了自己的cloud账号啥的，花了大概不到一小时，自己也把hexo流程熟悉了一下，直接deploy到github pages上了，紧接着几天工作非常忙！忘记这茬子事了，也一直忘记了，也不是故意用那位谁的一些post，真的是失误！所以当即打算重新采用一款非常简洁的主题：maupassant 传送门 目标打算利用三个月的时间将大前端的知识全部系统的整理出来，到时还会有相关的实战项目，希望大家多多支持]]></content>
+    <content type="text"><![CDATA[初衷由于本人工作非常忙，这几年来整理的一些知识都是记录在有道云笔记上的，平时也经常看一些blog，有时候收获挺多的，所以也一直想把自己的一些认知分享给别人！我认为这是一种快乐！ 使用hexo123456npm install -g hexo-cli #-g表示全局安装hexo init # 初始化hexo install # 安装依赖包hexo g # 等同于hexo generate，生成静态文件hexo s # 等同于hexo server，在本地服务器运行hex deploy #部署 目前采用一款非常简洁的主题：maupassant 传送门 目标打算利用三个月的时间将大前端的知识全部系统的整理出来，到时还会有相关的实战项目，希望大家多多支持]]></content>
       <categories>
         <category>随笔</category>
       </categories>
